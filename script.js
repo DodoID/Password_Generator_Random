@@ -88,10 +88,19 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options
-function getPasswordOptions() {
+// Function to prompt user for password options and return an array of selected characters
 
-}
+function getPasswordOptions() {
+  var length = parseInt(prompt("Enter the length of your password (between 8 and 128 characters):"));
+
+  // Check if the input is a valid number between 8 and 128 characters
+  if (isNaN(length) || length < 8 || length > 128) {
+    alert("Please enter a valid password length between 8 and 128 characters.");
+
+    // Exit the function if the input is invalid or outside the range
+
+    return null; 
+  }
 
 // Function for getting a random element from an array
 function getRandom(arr) {

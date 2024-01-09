@@ -116,6 +116,15 @@ function getPasswordOptions() {
     return null; 
   }
 
+// Create an object to store user options and return it
+var passwordOptions = {
+  length: length,
+  specialChars: includeSpecialChars,
+  numbers: includeNumbers,
+  lowercase: includeLowercase,
+  uppercase: includeUppercase
+};
+
 // Function for getting a random element from an array
 function getRandom(arr) {
 

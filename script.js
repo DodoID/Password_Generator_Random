@@ -163,6 +163,7 @@ function generatePassword() {
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
+generateBtn.addEventListener('click', writePassword);
 
 // Write password to the #password input
 function writePassword() {

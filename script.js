@@ -102,6 +102,20 @@ function getPasswordOptions() {
     return null; 
   }
 
+  // Options for  password length and character types and confirmation prompt for each option
+  var includeSpecialChars = confirm("Include special characters?");
+  var includeNumbers = confirm("Include numbers?");
+  var includeLowercase = confirm("Include lowercase letters?");
+  var includeUppercase = confirm("Include uppercase letters?");
+
+  // Check if at least one character type is selected 
+  if (!includeSpecialChars && !includeNumbers && !includeLowercase && !includeUppercase) {
+    alert("You must select at least one character type.");
+
+    // Exit the function if no character type is selected 
+    return null; 
+  }
+
 // Function for getting a random element from an array
 function getRandom(arr) {
 
